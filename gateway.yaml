@@ -1,5 +1,5 @@
 server:
-  port: 8075
+  port: 8880
 
 eureka:
   client:
@@ -16,6 +16,7 @@ spring:
       discovery:
         locator:
           enabled: true
+          lower-case-service-id: true
       routes:
         - id: listRepair
           uri: lb://listRepair
