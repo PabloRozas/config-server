@@ -4,5 +4,11 @@ eureka:
   client:
     fetch-registry: false
     register-with-eureka: false
+    healthcheck:
+      enabled: true
+    lease:
+      renewalIntervalInSecs: 30
+      durationInSecs: 90
+    eviction-interval-timer-in-ms: 30000
     service-url:
       default-zone: http://${eureka.instance.hostname}:${server.port}/eureka/
