@@ -22,8 +22,6 @@ spring:
               - POST
               - PUT
               - DELETE
-            allowedHeaders:
-              - "*"
             allowCredentials: false
       discovery:
         locator:
