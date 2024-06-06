@@ -38,6 +38,10 @@ spring:
           uri: lb://reparation
           predicates:
             - Path=/repairs/**
+        - id: repair_list_repair
+          uri: lb://reparation
+          predicates:
+            - Path=/repair_list_repair/**
         - id: vehicle
           uri: lb://vehicle
           predicates:
