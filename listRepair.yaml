@@ -1,8 +1,8 @@
 server:
-  port: ${PORT:${SERVER_PORT:0}}
+  port: 0
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3308/listrepair
+    url: jdbc:mysql://mysql-list-repair-service:3308/listrepair
     username: mysqluser
     password: adminpassword
     driver-class-name: com.mysql.cj.jdbc.Driver

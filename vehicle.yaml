@@ -1,5 +1,5 @@
 server:
-  port: ${PORT:${SERVER_PORT:0}}
+  port: 0
 spring:
   datasource:
     # TODO: Cambiar el puerto de este y los demas microservicios para la base de datos
