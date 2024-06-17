@@ -3,7 +3,7 @@ server:
 spring:
   datasource:
     url: jdbc:mysql://mysql-list-repair-service:3308/listrepair
-    username: root
+    username: mysqluser
     password: adminpassword
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
