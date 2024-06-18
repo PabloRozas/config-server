@@ -13,6 +13,8 @@ eureka:
 spring:
   cloud:
     gateway:
+      discoveryClient:
+        enabled: true
       globalcors:
         corsConfigurations:
           "[/**]":
