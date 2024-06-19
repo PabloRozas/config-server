@@ -9,6 +9,7 @@ eureka:
       default-zone: http://eureka-service:8761/eureka/
   instance:
     hostname: eureka-service
+    prefer-ip-address: true
 
 spring:
   cloud:
