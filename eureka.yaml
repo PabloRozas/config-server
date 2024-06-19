@@ -1,17 +1,18 @@
 server:
   port: 8761
 eureka:
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 10000
   client:
     fetch-registry: false
     register-with-eureka: false
     healthcheck:
       enabled: true
-    lease:
-      renewalIntervalInSecs: 60
-      durationInSecs: 10
-    eviction-interval-timer-in-ms: 30000
     service-url:
-      default-zone: http://eureka-service:8761/eureka/
+      default-zone: http://${EUREKA_DEFAULT_ZONE_CS}:8761/eureka/
   instance:
-    hostname: eureka-service
-    
+    hostname: ${EUREKA_DEFAULT_ZONE_CS}
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 10

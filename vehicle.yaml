@@ -2,10 +2,9 @@ server:
   port: 0
 spring:
   datasource:
-    # TODO: Cambiar el puerto de este y los demas microservicios para la base de datos
-    url: jdbc:mysql://localhost:3307/vehicle
-    username: mysqluser
-    password: adminpassword
+    url: jdbc:mysql://${SERVICE_DB_HOST_CS}:${SERVICE_DB_PORT_CS}/${SERVICE_DB_NAME_CS}
+    username: ${SERVICE_DB_USER_CS}
+    password: ${SERVICE_DB_PASS_CS}
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
@@ -15,6 +14,6 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      default-zone: http://localhost:8761/eureka
+      default-zone: http://${EUREKA_DEFAULT_ZONE_CS}:8761/eureka
   instance:
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    prefer-ip-address: true
